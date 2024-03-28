@@ -12,6 +12,21 @@ public class OrderedList {
 	}
 
 	public void removeNum(int x) {
-		System.out.println("remove " + x);
+		Node <NumCount> first = this.lst;
+		
+		while(this.lst.getNext() != null ) {
+			if(this.lst.getNext().getValue().getNum == num) {
+				if(this.lst.getCount -1 > 0) {
+					this.lst.getValue().setCount = this.lst.getCount() - 1;
+					return first;
+				}
+				else {
+					this.lst.setNext(lst.getNext().getNext());
+					return first;
+				}
+			}
+			this.lst = this.lst.getNext();
+		}
+	}
 	}
 }
